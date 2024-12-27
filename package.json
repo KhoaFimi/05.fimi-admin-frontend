@@ -1,0 +1,70 @@
+{
+	"name": "05.fimi-admin-frontend",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build && electron-builder",
+		"lint": "eslint",
+		"format": "prettier --config .prettierrc --write .",
+		"preview": "vite preview",
+		"prepare": "husky",
+		"lint-staged": "lint-staged",
+		"commitlint": "commitlint --edit"
+	},
+	"dependencies": {
+		"@radix-ui/react-slot": "^1.1.1",
+		"@tanstack/react-router": "^1.92.6",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.469.0",
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
+		"tailwind-merge": "^2.6.0",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "19.6.0",
+		"@commitlint/config-conventional": "19.6.0",
+		"@eslint/js": "9.17.0",
+		"@fluid-tailwind/tailwind-merge": "^0.0.3",
+		"@tanstack/router-devtools": "^1.92.6",
+		"@tanstack/router-plugin": "^1.91.1",
+		"@types/node": "^22.10.2",
+		"@types/react": "19.0.2",
+		"@types/react-dom": "19.0.2",
+		"@vitejs/plugin-react": "4.3.4",
+		"autoprefixer": "^10.4.20",
+		"electron": "33.2.1",
+		"electron-builder": "25.1.8",
+		"eslint": "9.17.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-import": "2.31.0",
+		"eslint-plugin-prettier": "5.2.1",
+		"eslint-plugin-react-hooks": "5.1.0",
+		"eslint-plugin-react-refresh": "0.4.16",
+		"eslint-plugin-simple-import-sort": "12.1.1",
+		"fluid-tailwind": "^1.0.4",
+		"globals": "15.14.0",
+		"husky": "9.1.7",
+		"lint-staged": "^15.2.11",
+		"postcss": "^8.4.49",
+		"prettier": "3.4.2",
+		"prettier-plugin-tailwindcss": "0.6.9",
+		"tailwindcss": "^3.4.17",
+		"typescript": "5.7.2",
+		"typescript-eslint": "8.18.2",
+		"vite": "6.0.6",
+		"vite-plugin-electron": "0.29.0",
+		"vite-plugin-electron-renderer": "0.14.6"
+	},
+	"main": "dist-electron/main.js",
+	"lint-staged": {
+		"*.ts": [
+			"npm run lint --fix",
+			"npm run format",
+			"git add ."
+		]
+	}
+}
